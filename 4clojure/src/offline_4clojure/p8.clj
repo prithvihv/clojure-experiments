@@ -7,6 +7,7 @@
 
 (def __
 ;; your solution here
+#{:a :b :c :d}
 )
 
 (defn -main []

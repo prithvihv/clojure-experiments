@@ -7,6 +7,7 @@
 
 (def __
 ;; your solution here
+'(6 7 8)
 )
 
 (defn -main []
