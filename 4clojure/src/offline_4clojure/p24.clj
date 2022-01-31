@@ -5,10 +5,10 @@
 (ns offline-4clojure.p24
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+(reduce + l)
 )
-
 (defn -main []
   (are [soln] soln
 (= (__ [1 2 3]) 6)

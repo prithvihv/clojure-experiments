@@ -5,8 +5,13 @@
 (ns offline-4clojure.p22
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+  (loop [l l
+         i 0]
+    (if (nil? (first l))
+        i
+        (recur (rest l) (+ i 1))))
 )
 
 (defn -main []

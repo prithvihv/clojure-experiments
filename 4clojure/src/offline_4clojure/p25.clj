@@ -5,8 +5,9 @@
 (ns offline-4clojure.p25
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+ (filter #(not (even? %)) l)
 )
 
 (defn -main []

@@ -5,8 +5,9 @@
 (ns offline-4clojure.p20
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+(first (take-last 2 l))
 )
 
 (defn -main []

@@ -5,9 +5,20 @@
 (ns offline-4clojure.p26
   (:use clojure.test))
 
-(def __
+(defn __ [n]
 ;; your solution here
-)
+  (loop [i 0
+         prevFib1 0
+         prevFib2 1
+         fib ()]
+    (if (= i n)
+      (reverse fib)
+      (let [currFib (+ prevFib1 prevFib2)]
+        (recur
+         (+ i 1)
+         currFib
+         prevFib1
+         (conj fib currFib))))))
 
 (defn -main []
   (are [soln] soln
