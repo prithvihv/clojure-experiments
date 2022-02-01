@@ -6,8 +6,15 @@
 (ns offline-4clojure.p27
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+  (loop [f l
+         r (reverse l)]
+    (if (and (nil? (first f)) (nil? (first r))) 
+      true 
+      (if (= (first r) (first f))  
+        (recur (rest f) (rest r))  
+        false)))
 )
 
 (defn -main []

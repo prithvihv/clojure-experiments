@@ -5,8 +5,14 @@
 (ns offline-4clojure.p28
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+  (if (sequential? l)
+    (if (> (count l) 0) 
+      (concat (__ (drop-last l))  
+                (__ (last l))) 
+        '())
+    [l])
 )
 
 (defn -main []

@@ -5,8 +5,16 @@
 (ns offline-4clojure.p30
   (:use clojure.test))
 
-(def __
+(defn __ [n]
 ;; your solution here
+   (loop [l n
+          pure '()]
+      (let [curr (first l)
+            next (first (rest l))
+            newL (rest l)]
+        (if (= 0 (count l)) 
+            (reverse pure) 
+           (recur newL (if (= curr next) pure (conj pure curr)) )) ))
 )
 
 (defn -main []
