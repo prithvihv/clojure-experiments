@@ -5,8 +5,9 @@
 (ns offline-4clojure.p32
   (:use clojure.test))
 
-(def __
+(defn __ [l]
 ;; your solution here
+  (reduce concat (map #(conj [%1] %1) l))
 )
 
 (defn -main []
