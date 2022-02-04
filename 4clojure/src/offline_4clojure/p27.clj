@@ -7,6 +7,7 @@
   (:use clojure.test))
 
 (defn __ [l]
+;; #(= (seq %) (reverse (seq %))) 🤦‍♂
 ;; your solution here
   (loop [f l
          r (reverse l)]

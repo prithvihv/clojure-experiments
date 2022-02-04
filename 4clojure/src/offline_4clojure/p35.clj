@@ -7,6 +7,7 @@
 
 (def __
 ;; your solution here
+7
 )
 
 (defn -main []

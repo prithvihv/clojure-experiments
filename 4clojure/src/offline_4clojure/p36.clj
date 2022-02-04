@@ -7,11 +7,12 @@
 
 (def __
 ;; your solution here
+ 
 )
 
 (defn -main []
   (are [soln] soln
-(= 10 (let __ (+ x y)))
-(= 4 (let __ (+ y z)))
-(= 1 (let __ z))
+(= 10 (let [z 1 y 3 x 7] (+ x y)))
+(= 4 (let [z 1 y 3 x 7] (+ y z)))
+(= 1 (let [z 1 y 3 x 7] z))
 ))

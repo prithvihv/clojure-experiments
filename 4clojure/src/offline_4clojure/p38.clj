@@ -5,9 +5,17 @@
 (ns offline-4clojure.p38
   (:use clojure.test))
 
-(def __
+(defn __ [& args]
 ;; your solution here
-)
+;; solution uses sort
+;; #(last (sort %&)) 🤦‍♂
+  (loop [m -1
+         l args]
+    (if (> (count l) 0)
+      (if (> (first l) m)
+        (recur (first l) (rest l))
+        (recur m (rest l)))
+      m)))
 
 (defn -main []
   (are [soln] soln
